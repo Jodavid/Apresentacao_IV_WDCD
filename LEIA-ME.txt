@@ -1,0 +1,10 @@
+Para recompilar (Quarto >= 1.4):
+  python3 figs.py            # regera os gráficos em fig/ (opcional)
+  quarto render apresentacao_ia_estatistica.qmd
+
+tema_embed.scss = tema.scss com as fontes embutidas em base64 (é o que o .qmd usa,
+para o HTML final não depender de arquivos externos). Se editar tema.scss, regenere
+tema_embed.scss substituindo url("fonts/...") pelo conteúdo base64 dos arquivos.
+
+Na apresentação: S = visão do apresentador (notas + cronômetro), F = tela cheia.
+Slides 2, 3, 7 e 14 têm um elemento que aparece no clique (marcado como [clique] nas notas).
