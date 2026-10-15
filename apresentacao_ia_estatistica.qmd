@@ -87,11 +87,11 @@ Tecnologia gera possibilidades; [critérios estatísticos transformam possibilid
 ::: {.trio}
 ::: {}
 [+26%]{.hero .m .cinza}
-[artigos com IA nas ciências naturais em um ano (≈ 80 mil em 2025)]{.hero-leg .ctx}
+[artigos com IA nas <b style="color:#1e66d0">CIÊNCIAS NATURAIS</b> em um ano (≈ 80 mil em 2025)]{.hero-leg .ctx}
 :::
 ::: {}
 [6–9%]{.hero .m .cinza}
-[da produção científica já envolve IA, conforme a área (< 1% em 2010)]{.hero-leg .ctx}
+[da produção científica já envolve IA, conforme a área (<b style="color:#1e66d0">< 1% em 2010</b>)]{.hero-leg .ctx}
 :::
 ::: {}
 [88%]{.hero .m .cinza}
@@ -107,7 +107,7 @@ Tecnologia gera possibilidades; [critérios estatísticos transformam possibilid
 [< 20%]{.hero .verm}
 :::
 ::: {.column .pt width="66%"}
-de acerto dos modelos de fronteira ao tentar **replicar** artigos de astrofísica (ReplicationBench).
+de acerto dos modelos de fronteira ao tentar **replicar** artigos de <b style="color:#1e66d0">astrofísica</b> (ReplicationBench).
 
 [Gerar ficou barato. **Auditar** virou a competência decisiva.]{.marca-r}
 :::
@@ -149,7 +149,7 @@ Se citarem o "72º" do podcast: "o número atual do índice é 53º, mas o argum
 *Se sobrar tempo:* no GII 2025, melhor em resultados (50º) do que em insumos (63º); única economia latino-americana com P&D acima de 1% do PIB.
 :::
 
-## O Brasil compete onde há dados e problemas locais
+## O Brasil deve competir com dados e problemas locais
 
 <br/>
 
@@ -170,7 +170,9 @@ Se citarem o "72º" do podcast: "o número atual do índice é 53º, mas o argum
 ::: {.column .pt width="45%"}
 Nas camadas 2 e 3 estão [problemas que ninguém lá fora vai resolver por nós]{.marca}.
 
-A lição dos **genéricos**: capacidade nacional gera autonomia e poder de barganha.
+<br/>
+
+<span style="color:#1e66d0">A lição dos **genéricos**: capacidade nacional gera autonomia e poder de barganha.</span>
 
 ::: {.mensagem}
 É onde desenho amostral e validação local decidem.
@@ -196,6 +198,7 @@ Todo modelo, do mais simples ao maior LLM, aproxima o mecanismo gerador $P(X,Y)$
 :::
 
 <br/>
+<br/>
 
 ::: {.ciclo style="margin-top:1em"}
 [Mecanismo gerador]{.etapa .est}
@@ -215,7 +218,7 @@ a validação volta e questiona como os dados foram coletados
 
 <br/>
 
-::: {.trio style="margin-top:0.8em;font-size:0.8em"}
+<!-- ::: {.trio style="margin-top:0.8em;font-size:0.8em"}
 ::: {.ctx}
 **Sensibilidade:** quanto muda com outra amostra?
 :::
@@ -225,7 +228,7 @@ a validação volta e questiona como os dados foram coletados
 ::: {.ctx}
 **Estrutura:** padrão real ou espúrio?
 :::
-:::
+::: -->
 
 ::: notes
 **0:45** · "Todo modelo tenta aproximar o mecanismo que gera os dados a partir de uma amostra. Isso é inferência indutiva."
@@ -307,16 +310,17 @@ Aponte o "< 10": "Por causa do viés de seleção, as 250 mil respostas da Delph
 
 ## Com mais parâmetros que dados, o erro volta a cair
 
-<br/>
-
+<p></p>
 
 :::: {.columns}
 ::: {.column width="40%"}
-[Clássico ($n > p$)]{.ctx}: uma solução.
+[*Clássico* ($n > p$)]{.ctx}: uma solução.
 
 $$
 \hat{\beta} = (X^\top X)^{-1}X^\top y
 $$
+
+<br/>
 
 **Moderno ($p \gg n$)**: [infinitas soluções]{.marca}; a regularização escolhe uma.
 
@@ -347,7 +351,7 @@ Gráfico: "Aprendemos o U, em cinza. Belkin e colegas mostraram que, depois do p
 Se perguntarem: Gauss–Markov = variância mínima entre estimadores **lineares não viesados**; com regularização ótima, o pico some.
 :::
 
-## Diz 95%, acerta 85%: fluência não é calibração
+<!-- ## Diz 95%, acerta 85%: fluência não é calibração
 
 <br/>
 
@@ -362,7 +366,7 @@ Calibrado é quem, ao dizer "90%", [acerta 90% das vezes]{.marca}.
 
 Redes profundas modernas tendem a ser **sobreconfiantes** (Guo et al., 2017). []{.ctx}
 
-<!-- [Medir: Brier, ECE. Corrigir: Platt, isotônica, *temperature scaling*.]{.ctx .peq} -->
+<!-- [Medir: Brier, ECE. Corrigir: Platt, isotônica, *temperature scaling*.]{.ctx .peq}
 
 <br/>
 
@@ -377,6 +381,8 @@ Confiança em texto fluente não é probabilidade, até ser verificada.
 
 Nuance se perguntarem: o GPT-4 pré-treinado era razoavelmente calibrado; o RLHF piorou (OpenAI, 2023).
 :::
+
+-->
 
 ## Na média, 90% de cobertura. No grupo B, 67%.
 
@@ -517,7 +523,7 @@ Não "o modelo acerta?", mas: em que condições, para quem, com que margem de e
 
 
 ::: {.mensagem style="margin-top:1em"}
-A universidade precisa valorizar profundidade, reprodutibilidade e impacto real.
+A Universidade precisa valorizar profundidade, reprodutibilidade e impacto real.
 :::
 
 ::: notes
@@ -546,9 +552,11 @@ Primeiro corte se estiver atrasado.
 ::: {.column style="width: 58%; margin-top: -1.5cm;"}
 Os erros mais comuns são **silenciosos**:
 
+<br/>
+
 - **Vazamento:** padronizar, imputar ou selecionar variáveis [antes de separar treino e teste]{.marca-r}.
 - **Dependência ignorada:** mesmo paciente ou série temporal tratados como i.i.d.
-- **Sobreajuste por tentativas:** o jardim dos caminhos que se bifurcam.
+<!-- - **Sobreajuste por tentativas:** o jardim dos caminhos que se bifurcam. -->
 
 [Kapoor & Narayanan (2023): vazamento em centenas de artigos de 17 áreas.]{.mpeq .ctx}
 :::
@@ -676,7 +684,7 @@ Frase de efeito: "arguição por sorteio: uma solução estatística para um pro
 :::
 
 ::: {.mensagem .verm}
-O AI Act europeu classifica IA para admissão e avaliação educacional como alto risco.
+O AI Act europeu classifica IA para <b style="color:#1E66d0;">admissão</b> e <b style="color:#1E66d0;">avaliação educacional</b> como alto risco.
 :::
 [Reg. (UE) 2024/1689, Anexo III. No Brasil, o PL 2.338/2023 também classifica por risco.]{.mpeq .ctx}
 
