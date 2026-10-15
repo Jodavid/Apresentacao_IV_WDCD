@@ -191,7 +191,8 @@ Ponte: "um modelo treinado em hospitais americanos é, para o SUS, um modelo for
 <br/>
 
 ::: {.grande style="font-size:1.25em"}
-Todo modelo, do mais simples ao maior LLM, aproxima o mecanismo gerador $P(X,Y)$ a partir de uma **amostra finita**: [é inferência indutiva]{.marca}.
+Todo modelo, do mais simples ao maior LLM, aproxima o mecanismo gerador $P(X,Y)$ a partir de uma **amostra finita**
+<!-- : [é inferência indutiva]{.marca}. -->
 :::
 
 <br/>
@@ -239,37 +240,69 @@ As três perguntas em cinza: leia rápido ou só aponte.
 ## Mais dados não corrigem dados ruins
 
 <br/>
+<br/>
+<br/>
 
-::: {.duo style="margin-top:0.3em"}
+
+::: {.duo style="margin-top:0.2em"}
 ::: {}
-[250 mil]{.hero .cinza}
-[respostas *online* por semana superestimaram a vacinação contra Covid nos EUA em]{.hero-leg .ctx}
-[17 p.p.]{.hero .m style="margin-top:0.15em"}
+[Delphi–Facebook · ~250 mil respostas/semana]{.rot .ctx}
+[+17 p.p.]{.hero .cinza style="font-size:2.4em"}
+[de erro na vacinação contra Covid (1ª dose, adultos dos EUA, maio/2021), com IC 95% tão estreito que [nem aparece no gráfico]{.marca}]{.hero-leg .ctx style="font-size:0.72em"}
 :::
 <!-- ::: {.fragment} -->
-[1 mil]{.hero .ouro}
-[respostas de uma **amostra probabilística**]{.hero-leg}
-[acertou]{.hero .m .ouro style="margin-top:0.15em"}
+::: {}
+[Axios–Ipsos · ~1 mil respostas/onda]{.rot}
+[+4,2 p.p.]{.hero .ouro style="font-size:2.4em"}
+[de erro; o IC 95% conteve o valor oficial do CDC em [10 de 11 ondas]{.marca} (cobertura empírica de 91%)]{.hero-leg style="font-size:0.72em"}
+:::
 <!-- ::: -->
+
+<!-- :::
+
+::: {.numeros style="margin-top:0.7em;font-size:0.8em"}
+::: {.numero}
+::: {.v style="font-size:2em"}
+&lt; 10
+:::
+::: {.d}
+***n* efetivo** da Delphi–Facebook em abril/2021: 250 mil respostas valem menos que 10 por amostragem aleatória simples (redução de 99,99%)
+:::
+:::
+::: {.numero}
+::: {.v style="font-size:2em"}
++14 p.p.
+:::
+::: {.d}
+Census Household Pulse, ~75 mil respostas/onda: redução de mais de 99% no *n* efetivo
+:::
+:::
+::: {.numero}
+::: {.v style="font-size:2em"}
+1,1–1,2
+:::
+::: {.d}
+efeito de desenho do Axios–Ipsos: painel KnowledgePanel recrutado por **amostra probabilística de endereços**, com internet fornecida a quem não tem
+:::
+::: -->
+
 :::
 
 <br/>
-
-$$
-\text{erro} \;=\; \underbrace{\rho_{R,Y}}_{\text{qualidade}} \times \underbrace{\sqrt{\tfrac{1-f}{f}}}_{\text{quantidade}} \times \underbrace{\sigma_Y}_{\text{dificuldade}}
-$$
 <br/>
 
-[Bradley et al. (2021), *Nature*; Meng (2018), *Annals of Applied Statistics*.]{.fonte}
+[Referência: contagem oficial de 1ª doses do CDC. Totais jan.–mai./2021: Delphi–Facebook 4.525.633 (19 ondas); Household Pulse 606.615 (8); Axios–Ipsos 11.421 (11). Bradley et al. (2021), *Nature*, 600, 695–700.]{.fonte}
 
 ::: notes
-**0:45** · "Dados são construções humanas. Um exemplo real: em 2021, pesquisas online com cerca de 250 mil respostas por semana superestimaram a vacinação nos EUA em 17 pontos."
+**0:45** · "Dados são construções humanas. Um exemplo real, publicado na *Nature*: em 2021, três pesquisas mediram a vacinação contra Covid nos EUA, e o CDC tinha o número oficial para comparar."
 
-**[clique]** → "Uma amostra probabilística de mil pessoas acertou."
+"A Delphi–Facebook, com 250 mil respostas por semana, errou em 17 pontos percentuais, e o intervalo de confiança dela era tão estreito que nem aparecia no gráfico: precisão sem acurácia."
 
-Aponte a fórmula sem lê-la: "Xiao-Li Meng: erro é qualidade vezes quantidade vezes dificuldade. Se a qualidade é ruim, quantidade não salva."
+**[clique]** → "O Axios–Ipsos, com cerca de mil respostas por onda, errou 4,2 pontos, e o intervalo de 95% conteve o valor do CDC em 10 de 11 ondas. A diferença foi o desenho: recrutamento probabilístico por endereço."
 
-*Se sobrar tempo:* correlação de seleção de 0,005 pode fazer milhões de respostas valerem menos que algumas centenas de uma amostra aleatória.
+Aponte o "< 10": "Por causa do viés de seleção, as 250 mil respostas da Delphi–Facebook valeram o mesmo que menos de 10 pessoas sorteadas ao acaso. Se a qualidade é ruim, quantidade não salva."
+
+*Se perguntarem:* os erros cresceram com o tempo, de poucos pontos em janeiro para 4,2 / 14 / 17 p.p. em meados de maio. O CDC está como referência (não é verdade absoluta); os autores testaram ±5% e ±10% de erro no CDC e a conclusão se mantém. A Delphi–Facebook não pondera por escolaridade: quem não tem curso superior ficou sub-representado em quase 20 p.p.
 :::
 
 ## Com mais parâmetros que dados, o erro volta a cair
@@ -660,7 +693,7 @@ Se atrasado: só a frase do título. Verifique na semana o estado do PL 2.338/20
 <br/>
 
 ::: {.citacao}
-"A Inteligência Artificial pode acelerar a velocidade das nossas respostas. [Mas é a Estatística que garante a solidez das nossas perguntas e a calibração das nossas incertezas.]{.ouro-t}"
+"A Inteligência Artificial pode acelerar a velocidade das nossas respostas. [Mas a Estatística garante a solidez das nossas perguntas e a calibração das nossas incertezas.]{.ouro-t}"
 :::
 
 <br/>
